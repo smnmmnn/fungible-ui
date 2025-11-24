@@ -1,6 +1,6 @@
 # Fungible UI
 
-A chat interface for understanding users. Ask questions and get answers with interactive visualizations.
+Exploring widgets in a conversational UI.
 
 ## Getting started
 
@@ -23,7 +23,7 @@ Open [http://localhost:3000](http://localhost:3000) to see it in action.
 
 ## What it does
 
-Ask questions about your users and get back answers with charts, numbers, and insights. The AI generates both text responses and interactive UI components to help you understand what's happening.
+A conversational interface that generates interactive widgets like charts, numbers, and other UI components in response to your questions.
 
 ## Tech stack
 
