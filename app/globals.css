@@ -8,8 +8,91 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-posthog-3000-25: #f7f7f5;
+  --color-posthog-3000-50: #f3f4f0;
+  --color-posthog-3000-100: #eff0ea;
+  --color-posthog-3000-150: #e5e7df;
+  --color-posthog-3000-200: #dbded4;
+  --color-posthog-3000-250: #cfd0c8;
+  --color-posthog-3000-300: #c5c7bd;
+  --color-posthog-3000-350: #b9bbaf;
+  --color-posthog-3000-400: #abad9f;
+  --color-posthog-3000-450: #9fa191;
+  --color-posthog-3000-500: #939583;
+  --color-posthog-3000-600: #7d7f70;
+  --color-posthog-3000-700: #67695c;
+  --color-posthog-3000-800: #525449;
+  --color-posthog-3000-900: #3c3e35;
+  --color-posthog-3000-950: #262822;
+  --color-primary-3000-frame-bg-light: #eb9d2a;
+  --color-primary-3000-button-bg-light: #fff;
+  --color-primary-3000-button-border-light: #b17816;
+  --color-primary-3000-button-border-hover-light: #8e5b03;
+  --color-secondary-3000-frame-bg-light: #e1dddd;
+  --color-secondary-3000-button-bg-light: #f3f4ef;
+  --color-secondary-3000-button-border-light: #ccc;
+  --color-secondary-3000-button-border-hover-light: #aaa;
+  --color-posthog-brand-orange-hue: 19;
+  --color-posthog-brand-orange-saturation: 100%;
+  --color-posthog-brand-orange-lightness: 48%;
+  --color-posthog-brand-blue-hue: 228;
+  --color-posthog-brand-blue-saturation: 100%;
+  --color-posthog-brand-blue-lightness: 56%;
+  --color-posthog-brand-yellow-hue: 43;
+  --color-posthog-brand-yellow-saturation: 94%;
+  --color-posthog-brand-yellow-lightness: 57%;
+  --primary-3000-frame-bg-light: #eb9d2a;
+  --primary-3000-button-bg-light: #fff;
+  --primary-3000-button-border-light: #b17816;
+  --primary-3000-button-border-hover-light: #8e5b03;
+  --secondary-3000-frame-bg-light: #e1dddd;
+  --secondary-3000-button-bg-light: #f3f4ef;
+  --secondary-3000-button-border-light: #ccc;
+  --secondary-3000-button-border-hover-light: #aaa;
+  --font-sans: var(--font-inter-sans);
   --font-mono: var(--font-geist-mono);
+  --text-base: 0.9rem;
+  --color-skeleton-light: var(--color-posthog-3000-100);
+  --color-skeleton-dark: var(--color-posthog-3000-200);
+  --data-color-2: #7f26d9;
+  --data-color-3: #3e7a76;
+  --data-color-4: #bf0d6c;
+  --data-color-5: #f0474f;
+  --data-color-6: #b36114;
+  --data-color-10: #6576b3;
+}
+
+@keyframes LemonSkeleton__shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.skeleton-shimmer {
+  animation: LemonSkeleton__shimmer 2s ease infinite;
+  background: linear-gradient(
+    90deg,
+    var(--color-skeleton-light) 25%,
+    var(--color-skeleton-dark) 45%,
+    var(--color-skeleton-light) 65%
+  );
+  background-size: 400% 100%;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +105,19 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter-sans), sans-serif;
+}
+
+.mono-counter {
+  font-family: var(--font-space-mono), "Space Mono", monospace;
+}
+
+h4 {
+  @apply text-[1.0125rem] font-bold;
+}
+
+h5 {
+  @apply font-bold text-[0.6875rem] leading-3 mb-1 uppercase tracking-[0.075em];
+  color: var(--color-text-secondary);
+  font-family: var(--font-inter-sans), sans-serif;
 }
