@@ -1,20 +1,23 @@
-# Fungible UI
+# 🦔 Fungible UI
 
 Exploring widgets in a conversational UI.
 
 ## Getting started
 
 1. Install dependencies:
+
 ```bash
 pnpm install
 ```
 
 2. Set your OpenAI API key:
+
 ```bash
 export OPENAI_API_KEY=your_key_here
 ```
 
 3. Run the development server:
+
 ```bash
 pnpm dev
 ```
